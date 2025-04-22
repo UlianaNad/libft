@@ -1,0 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/04/22 10:37:15 by unadoroz          #+#    #+#             */
+/*   Updated: 2025/04/22 11:16:49 by unadoroz         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int ft_tolower(int c)
+{
+     if (c > 64 && c < 91)
+    {
+        c = c + 32;
+	}
+     return (c);
+}
+ 
+#include <stdio.h>
+#include <ctype.h>
+int main(void)
+{
+    char c = 'O';
+    printf("%d\n", ft_tolower(c));
+	printf("%d\n", tolower(c));
+}
+      
