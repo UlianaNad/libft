@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:52:38 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/24 14:05:31 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/04/24 14:18:31 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,8 @@ char	*ft_strdup(const char *s)
 #include <stdio.h>
 int     main(void)
 {
-        printf("%s\n", ft_strdup("Hello, friends!"));
-		printf("%s\n", strdup("Hello, friends!"));
+	char str1 = ft_strdup("Hello, friends!");
+    printf("%s\n", str1);
+	printf("%s\n", strdup("Hello, friends!"));
 
 }
