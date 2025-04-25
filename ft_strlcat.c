@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 11:45:35 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/23 12:45:13 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/04/25 15:30:15 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,9 @@ size_t	strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	dst_len;
 	size_t	src_len;
-
+	
+	if (!src || !dst)
+		return(0);
 	dst_len = strlen(dst);
 	src_len = strlen(src);
 	
