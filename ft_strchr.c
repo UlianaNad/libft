@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:12:56 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/23 14:43:10 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/04/29 11:18:20 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,14 @@ char *ft_strchr(const char *s, int c)
 {
 	int	i;
 	i = 0;
+	unsigned char ch = (unsigned char)c;
 	while(s[i])
 	{
-		if(s[i] == c)
+		if(s[i] == ch)
 			return ((char *)(s + i));
-
 		i++;
 	}
-	if (c == 0)
-		return ((char *)(s + i));
-	
+	if (ch == '\0')
+		return ((char *)(s + i));	
 	return (NULL);
-}
-
-#include <stdio.h>
-int	main()
-{
-	char s[] = "Hello you!";
-	char w = 'l';
-	printf("%s\n", ft_strchr(s, w)); 
 }

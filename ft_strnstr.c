@@ -41,14 +41,3 @@ char *ft_strnstr(const char *big, const char *little, size_t n)
 	}
 	return(0);
 }
-
-#include <stdio.h>
-int main ()
-{
-	const char *largestring = "Foo Bar Baz";
-    const char *smallstring = "Bar";
-	char *ptr2;
-
-	ptr2 = ft_strnstr(largestring, smallstring, 18);
-	printf("%s\n", ptr2);
-}

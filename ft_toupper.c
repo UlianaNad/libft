@@ -18,13 +18,3 @@ int	ft_toupper(int c)
 	}
 	return (c);
 }
-
-#include <stdio.h>
-#include <ctype.h>
-int	main(void)
-{
-	char c = 'y';
-	printf("%d\n", ft_toupper(c));
-
-	printf("%d\n", toupper(c));
-}

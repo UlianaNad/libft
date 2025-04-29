@@ -39,12 +39,3 @@ size_t	ft_strlcpy (char *dst, const char *src, size_t size)
 	}
 	return (ft_strlen(src));
 }
-
-#include <stdio.h>
-int	main(void)
-{
-	char	dest[13];
-	char	src[] = "Hello, world!";
-	size_t copied = ft_strlcpy(dest, src, sizeof(dest));
-	printf("Copied: %s (%zu bytes needed)\n", dest, copied);
-}

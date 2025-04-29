@@ -14,11 +14,10 @@
 char *ft_strrchr(const char *s, int c)
 {
 	int	i;
+	
 	i = 0;
-
 	while(s[i])
 		i++;
-
 	if (c == 0)
         return ((char *)(s + i));
 
@@ -29,15 +28,6 @@ char *ft_strrchr(const char *s, int c)
 			return ((char *)(s + i));
 		}
 		i--;
-	}
-	
+	}	
 	return (NULL);	
-}
-#include <stdio.h>
-int	main()
-{
-	char s[] = "Hello you!";
-	char w = '\0';
-	printf("%s\n", ft_strrchr(s, w)); 
-	printf("%s\n", strrchr(s, w));
 }

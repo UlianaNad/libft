@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <string.h>
 
 size_t ft_strlen (const char *str)
@@ -23,19 +22,4 @@ size_t ft_strlen (const char *str)
 		i++;
 	}
 	return i;
-}
-
-int	main(void)
-{
-	char a[]="length";
-	char b[20]={'P','r','o','g','r','a','m','\0'};
-
-// using the %zu format specifier to print size_t
-
-	printf("%zu\n", ft_strlen(a));
-	printf("%zu\n", ft_strlen(b));
-	printf("%zu\n", strlen(a));
-        printf("%zu\n", strlen(b));
-	
-	return(0);
 }

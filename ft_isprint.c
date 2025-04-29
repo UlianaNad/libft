@@ -16,13 +16,3 @@ int	ft_isprint(int c)
 		return(1);
 	return(0);
 }
-
-#include <ctype.h>
-#include <stdio.h>
-
-int	main(void)
-{
-	char c = '	';
-	printf("%d\n",ft_isprint(c));
-	printf("%d\n",isprint(c));
-}

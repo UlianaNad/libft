@@ -6,12 +6,12 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 13:52:38 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/25 12:54:18 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/04/29 09:42:28 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
 #include <stdlib.h>
+
 char	*ft_strdup(const char *s)
 {
 	char	*new;
@@ -31,12 +31,4 @@ char	*ft_strdup(const char *s)
 	}
 	new[i] = '\0';
 	return (new);
-}
-#include <stdio.h>
-int     main(void)
-{
-	char *str1 = ft_strdup("Hello, friends!");
-    printf("%s\n", str1);
-	printf("%s\n", strdup("Hello, friends!"));
-
 }

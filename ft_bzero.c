@@ -23,17 +23,3 @@ void	ft_bzero(void *s, size_t len)
 		i++;
 	}
 }
-
-#include <stdio.h>
-int	main()
-{
-	char str[] = "akdjfglkkljdfhgksdjfhgkbcdcdee";
-    int c = 6;
-	printf("String before |%d| bytes changes to 0 is - |%s|\n", c, str);
- 
-    ft_bzero(str, c);
-    printf("String after first |%d| bytes changes to 0 is - |%s|\n", c, str);
-    bzero(str, c);
-	printf("String after first |%d| bytes changes to 0 is - |%s|\n", c, str);
-	return(0);
-}

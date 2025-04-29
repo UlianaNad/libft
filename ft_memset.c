@@ -11,14 +11,12 @@
 /* ************************************************************************** */
 
 #include <string.h>
-#include <stdio.h>
 void *ft_memset(void *s, int c, size_t len)
 {
     unsigned char *b;
     size_t i;
 
-    b = (unsigned char *)s; 
-
+    b = (unsigned char *)s;
     i = 0;
     while (i < len)
     {
@@ -26,13 +24,4 @@ void *ft_memset(void *s, int c, size_t len)
         i++;
     }
     return (b);
-}
-
-int main()
-{
-    char str[] = "Hello, world!";
-    ft_memset(str, 0, sizeof(str));
-    printf("%s\n", str);
-	memset(str, 0, sizeof(str));
-    printf("%s\n", str);
 }

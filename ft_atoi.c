@@ -36,12 +36,3 @@ int	ft_atoi(const char *nptr)
 	}
 	return(res * minus);
 }
-
-#include <stdio.h>
-#include <stdlib.h>
-int main ()
-{
-	char str[] = "  -4n";
-	printf("%d\n", ft_atoi(str));
-	printf("%d\n", atoi(str));
-}

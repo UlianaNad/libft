@@ -18,13 +18,4 @@ int ft_tolower(int c)
 	}
      return (c);
 }
- 
-#include <stdio.h>
-#include <ctype.h>
-int main(void)
-{
-    char c = 'O';
-    printf("%d\n", ft_tolower(c));
-	printf("%d\n", tolower(c));
-}
       
