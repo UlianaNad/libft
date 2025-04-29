@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:05:15 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/29 10:53:53 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/04/29 12:26:04 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,7 @@ int	ft_atoi(const char *nptr);
 char	*ft_strdup(const char *s);
 void	*ft_calloc(size_t nmemb, size_t size);
 
+//2nd part
+
+char *ft_substr(char const *s, unsigned int start, size_t len);
 #endif
