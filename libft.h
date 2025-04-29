@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 12:05:15 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/29 12:26:04 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/04/29 14:05:09 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,4 +44,6 @@ void	*ft_calloc(size_t nmemb, size_t size);
 //2nd part
 
 char *ft_substr(char const *s, unsigned int start, size_t len);
+char *ft_strjoin(char const *s1, char const *s2);
+char *ft_strtrim(char const *s1, char const *set);
 #endif
