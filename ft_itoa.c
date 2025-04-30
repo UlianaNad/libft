@@ -1,0 +1,46 @@
+#include "libft.h"
+static int num_len(long n)
+{
+    int i;
+    i = 0;
+    if(n <= 0)
+    {
+        i++;
+        n = -n;
+    }
+    while(n != 0)
+    {
+        n /= 10;
+        i++;
+    }
+    return(i);
+}
+char *ft_itoa(int n)
+{
+    long nb_len;
+    long num;
+    char *num_res;
+
+    nb_len = num_len(n);
+    num = n;
+    if(n < 0)
+        num *= -1;
+    num_res = (char *)calloc(nb_len + 1, sizeof(char));
+    if(!num_res)
+        return(NULL);
+    num_res[nb_len] = '\0';
+    if(num == 0)
+        num_res[0] = '0';
+    else
+    {
+        while(nb_len > 0 && num != 0)
+        {
+            nb_len--;
+            num_res[nb_len] = (num % 10) + '0';
+            num /= 10;
+        }
+        if(num < 0)
+            num_res[nb_len] = '-';
+    }
+    return(num_res);
+}
