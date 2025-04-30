@@ -20,19 +20,25 @@ the character ’c’ as a delimiter. The array must end with a NULL pointer.
 /*
 
 Count how many words there is in the string, depending on the delimiter
-
 Allocate an array of arrays (words array) big enough to hold all words + 1 that we can set to 0
-
 Allocate a string for each words in our words array and copy the words in it
-
 Free everything if we have a memory allocation error.
 */
 
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 #include "libft.h"
-static int count_words(char *s, char c)
+static int count_words(const char *s, char c)
 {
 	int words;
-	words = 0;
+
+    words = 0;
+    if(!s)
+    {
+        return(0);
+    }
+        
 	while (*s && *s == c)
         s++;
 	while (*s)
@@ -46,31 +52,47 @@ static int count_words(char *s, char c)
 	}
 	return (words);
 }
-
-#include <stdio.h>
-int main()
+void ft_free(void **ptr)
 {
-	char s[] = "Hello guys how are you";
-	char w = ' ';
-	printf("%d\n", count_words(s, w));
+    if (ptr && *ptr)
+    {
+        free(*ptr);
+        *ptr = NULL;
+     }
 }
-/*
 char **ft_split(char const *s, char c)
 {
-	int i = 0;
-
-	while(str[i] == ' ' || str[i] >= '\t' || str[i] <= '\r')
-	{
-		i++;
-	}
-	while(s[i])
-	{
-		if(s[i] == c)
-			{
-				
-			}
-	}
-	
-	
+     int word_len;
+     int word_index;
+     char **sub_str;
+ 
+     if(!s)
+         return(NULL);
+     sub_str = (char **)malloc((count_words((char *)s, c) + 1) * sizeof(char *));
+     if(!sub_str)
+         return(NULL);
+     word_index = 0;
+     while(*s)
+     {
+         while (*s && *s == c)
+             s++;
+         if(*s)
+         {
+             word_len = 0;
+             while(s[word_len] && s[word_len] != c)
+                 word_len++;
+             sub_str[word_index] = ft_substr(s, 0, word_len);
+             if(!sub_str[word_index])
+             {
+                while(word_index > 0)
+                    ft_free((void **)&sub_str[--word_index]);
+                ft_free((void **)&sub_str);
+                return(NULL);
+             }
+             word_index++;
+             s += word_len;
+          }
+    }
+    sub_str[word_index] = NULL;
+    return (sub_str);
 }
-*/
