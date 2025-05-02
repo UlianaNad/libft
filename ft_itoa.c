@@ -23,24 +23,22 @@ char *ft_itoa(int n)
 
     nb_len = num_len(n);
     num = n;
-    if(n < 0)
-        num *= -1;
     num_res = (char *)calloc(nb_len + 1, sizeof(char));
     if(!num_res)
         return(NULL);
     num_res[nb_len] = '\0';
     if(num == 0)
         num_res[0] = '0';
-    else
+    if(num < 0)
     {
-        while(nb_len > 0 && num != 0)
-        {
-            nb_len--;
-            num_res[nb_len] = (num % 10) + '0';
-            num /= 10;
-        }
-        if(num < 0)
-            num_res[nb_len] = '-';
+        num_res[0] = '-';
+        num = -num;
+    }
+    while(nb_len > 0 && num != 0)
+    {
+        nb_len--;
+        num_res[nb_len] = (num % 10) + '0';
+        num /= 10;
     }
     return(num_res);
 }

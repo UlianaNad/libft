@@ -19,22 +19,19 @@ Returns - The substring. NULL if the allocation fails.*/
 #include "libft.h"
 char *ft_substr(char const *s, unsigned int start, size_t len)
 {
-	char const *str;
 	char *sub_str;
 	size_t total;
-
-	str = s;
 	
-	if(!*str)
+	if(!s)
 		return (NULL);
-	if (start >= ft_strlen(str))
-		return(NULL);
-	total = ft_strlen(str + start);
+	if (start >= ft_strlen(s))
+		return(ft_strdup(""));
+	total = ft_strlen(s + start);
 	if (total > len)
 		total = len;
 	sub_str = malloc((total + 1) *  sizeof(char));
 	if(!sub_str)
 		return(NULL);
-	ft_strlcpy(sub_str, str + start, total + 1 );
+	ft_strlcpy(sub_str, s + start, total + 1 );
 	return(sub_str);
 }
