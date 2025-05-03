@@ -6,36 +6,37 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 12:43:00 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/29 13:36:56 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 13:14:22 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 #include "libft.h"
-char *ft_strjoin(char const *s1, char const *s2)
+
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	int	i;
 	int	j;
 	char	*result;
-	
+
 	i = 0;
 	j = 0;
-	if(!s1 || !s2)
+	if (!s1 || !s2)
 		return (NULL);
 	result = (char *)malloc(sizeof(char) * (ft_strlen(s1) + ft_strlen(s2) + 1));
-	if(!result)
-		return(NULL);
-	while(s1[i])
+	if (!result)
+		return (NULL);
+	while (s1[i])
 	{
 		result[i] = s1[i];
 		i++;
 	}
-	while(s2[j])
+	while (s2[j])
 	{
 		result[i] = s2[j];
 		i++;
 		j++;
 	}
 	result[i] = '\0';
-	return(result);
+	return (result);
 }
