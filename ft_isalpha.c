@@ -6,14 +6,13 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 09:35:00 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/15 10:51:49 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 12:09:06 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isalpha(int c)
 {
-	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) 
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 		return (1);
 	return (0);
 }
-

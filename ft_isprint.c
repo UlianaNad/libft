@@ -6,13 +6,13 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:26:59 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/04/15 14:38:45 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 12:11:03 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_isprint(int c)
 {
-	if(c > 31 && c < 127)
-		return(1);
-	return(0);
+	if (c > 31 && c < 127)
+		return (1);
+	return (0);
 }
