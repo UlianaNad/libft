@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 12:32:07 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 12:33:05 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 14:32:44 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*temp_dest;
 	unsigned char	*temp_src;
-	size_t		i;
+	size_t			i;
 
 	if (dest == (void *)0 && src == (void *)0)
 		return (dest);

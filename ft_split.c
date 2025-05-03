@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/29 14:08:43 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 13:05:03 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 14:36:55 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,8 @@ void	ft_free(void **ptr)
 
 char	**ft_split(char const *s, char c)
 {
-	int	word_len;
-	int	word_index;
+	int		word_len;
+	int		word_index;
 	char	**sub_str;
 
 	if (!s)

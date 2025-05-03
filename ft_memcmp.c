@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:07:08 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 12:26:55 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 14:31:55 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	const unsigned char	*str1;
 	const unsigned char	*str2;
-	size_t			i;
+	size_t				i;
 
 	str1 = s1;
 	str2 = s2;

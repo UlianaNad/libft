@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/24 10:40:22 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 13:30:41 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 14:34:04 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ char	*ft_strnstr(const char *big, const char *little, size_t n)
 {
 	const unsigned char	*big_str;
 	const unsigned char	*lit_str;
-	size_t	i;
-	size_t	r;
+	size_t				i;
+	size_t				r;
 
 	i = 0;
 	big_str = (const unsigned char *)big;

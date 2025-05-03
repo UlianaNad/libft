@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/05/03 13:23:43 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 13:25:19 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 14:35:24 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
-	char		*arr;
+	char			*arr;
 
 	arr = malloc((ft_strlen(s) + 1) * sizeof(char));
 	if (!arr)

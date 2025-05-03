@@ -6,7 +6,7 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/23 14:12:56 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 13:09:32 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/03 14:31:07 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strchr(const char *s, int c)
 {
 	unsigned char	ch;
-	int		i;
+	int				i;
 
 	i = 0;
 	ch = (unsigned char)c;
