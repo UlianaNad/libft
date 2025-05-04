@@ -18,31 +18,56 @@
 static int	count_words(const char *s, char c)
 {
 	int	words;
+    int in_word;
 
 	words = 0;
-	if (!s)
+    in_word = 0;
+	if (!s || !c)
 		return (0);
 	while (*s && *s == c)
 		s++;
 	while (*s)
 	{
-		if (ft_isalnum(*s))
+		if (*s != c && !in_word)
 		{
-			if (*(s + 1) == c || *(s + 1) == '\0')
-				words++;
+            in_word = 1;
+			words++;
 		}
+        else if (*s == c)
+            in_word = 0;
 		s++;
 	}
 	return (words);
 }
 
-void	ft_free(void **ptr)
+static void	ft_free(void **ptr)
 {
 	if (ptr && *ptr)
 	{
 		free(*ptr);
 		*ptr = NULL;
 	}
+}
+
+static char **free_mem(int word_index, char **sub_str)
+{
+    while (word_index > 0)
+        ft_free((void **)&sub_str[--word_index]);
+    ft_free((void **)&sub_str);
+    return (NULL);
+}
+
+static int  add_word(char **sub_str, const char *s, char c, int word_index)
+{
+    int word_len;
+
+    word_len = 0;
+    while (s[word_len] && s[word_len] != c)
+        word_len++;
+    sub_str[word_index] = ft_substr(s, 0, word_len);
+    if (!sub_str[word_index])
+        return (0);
+    return (word_len);
 }
 
 char	**ft_split(char const *s, char c)
@@ -59,22 +84,13 @@ char	**ft_split(char const *s, char c)
 	word_index = 0;
 	while (*s)
 	{
-		while (*s && *s == c)
-			s++;
+		while (*s && *s == c) s++;
 		if (*s)
 		{
-			word_len = 0;
-			while (s[word_len] && s[word_len] != c)
-				word_len++;
-			sub_str[word_index] = ft_substr(s, 0, word_len);
-			if (!sub_str[word_index])
-			{
-				while (word_index > 0)
-					ft_free((void **)&sub_str[--word_index]);
-				ft_free((void **)&sub_str);
-				return (NULL);
-			}
-			word_index++;
+            word_len = add_word(sub_str, s, c, word_index);
+			if (word_len == 0)
+                return (free_mem(word_index, sub_str));
+            word_index++;
 			s += word_len;
 		}
 	}
