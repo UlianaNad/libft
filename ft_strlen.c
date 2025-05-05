@@ -6,13 +6,13 @@
 /*   By: unadoroz <unadoroz@student.hive.fi>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 14:40:34 by unadoroz          #+#    #+#             */
-/*   Updated: 2025/05/03 13:23:08 by unadoroz         ###   ########.fr       */
+/*   Updated: 2025/05/05 09:17:48 by unadoroz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-size_t	t_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
