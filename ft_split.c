@@ -22,7 +22,7 @@ static int	count_words(const char *s, char c)
 
 	words = 0;
 	in_word = 0;
-	if (!s || !c)
+	if (!s)
 		return (0);
 	while (*s && *s == c)
 		s++;
